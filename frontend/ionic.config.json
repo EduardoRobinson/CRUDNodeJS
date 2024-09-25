@@ -1,0 +1,7 @@
+{
+  "name": "crudfrontend",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

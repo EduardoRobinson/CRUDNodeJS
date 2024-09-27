@@ -18,7 +18,7 @@ export class ChamadoService {
   }
 
   // Método para adicionar um novo chamado
-  adicionarChamado(chamado: Chamado): Observable<Chamado> {
+   adicionarChamado(chamado: Chamado): Observable<Chamado> {
     return this.http.post<Chamado>(`${this.apiUrl}/chamados`, chamado);
   }
 

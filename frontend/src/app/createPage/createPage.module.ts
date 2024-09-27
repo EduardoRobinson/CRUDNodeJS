@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 import { CommonModule } from '@angular/common'; 
-
+import { FormsModule } from '@angular/forms';
 import { CreatePage } from './createPage';
 
 const routes: Routes = [
@@ -16,7 +16,8 @@ const routes: Routes = [
   imports: [
     RouterModule.forChild(routes),
     IonicModule,
-    CommonModule
+    CommonModule,
+    FormsModule 
 ],
   exports: [RouterModule],
   declarations:[CreatePage]

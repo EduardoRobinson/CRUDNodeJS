@@ -1,0 +1,18 @@
+import { Injectable } from '@nestjs/common';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
+import { Chamado } from 'src/Models/Chamado.model';
+
+@Injectable()
+export class ChamadoService {
+  constructor(
+    @InjectRepository(Chamado)
+    private readonly chamadoRepository: Repository<Chamado>,
+  ) {}
+
+  // Exemplo de método para criar um chamado
+  async create(chamado: Chamado): Promise<Chamado> {
+    return this.chamadoRepository.save(chamado);
+  }
+
+}

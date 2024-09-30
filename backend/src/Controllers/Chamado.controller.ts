@@ -12,8 +12,8 @@ export class ChamadoController {
   }
 
   @Get()
-  read():string{
-    return 'Teste';
+  read():Promise<Chamado[]> {
+    return this.chamadoService.read();
   }
 
   // Outros endpoints podem ser adicionados aqui

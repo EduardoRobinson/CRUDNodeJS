@@ -15,4 +15,8 @@ export class ChamadoService {
     return this.chamadoRepository.save(chamado);
   }
 
+  async read() : Promise<Chamado[]> {
+    return this.chamadoRepository.find();
+  }
+
 }

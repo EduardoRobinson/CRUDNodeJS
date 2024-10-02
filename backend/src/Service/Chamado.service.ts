@@ -19,4 +19,8 @@ export class ChamadoService {
     return this.chamadoRepository.find();
   }
 
+  async update(id:number,status:string){
+    return this.chamadoRepository.update(id,{status:status});
+  }
+
 }

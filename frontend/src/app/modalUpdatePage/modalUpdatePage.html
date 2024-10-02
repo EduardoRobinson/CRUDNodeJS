@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Atualizar Chamado {{chamado.id}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">Fechar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Descrição:</ion-label>
+    <ion-text>{{ chamado.descricao }}</ion-text>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Status:</ion-label>
+    <ion-select [(ngModel)]="selectedStatus" (ionChange)="statusChanged()">
+      <ion-select-option value="aberto">Aberto</ion-select-option>
+      <ion-select-option value="cancelado">Cancelado</ion-select-option>
+      <ion-select-option value="resolvido">Resolvido</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-button expand="full" (click)="saveChanges()">Salvar Alterações</ion-button>
+</ion-content>

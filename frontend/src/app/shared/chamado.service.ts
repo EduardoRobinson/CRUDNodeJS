@@ -23,8 +23,8 @@ export class ChamadoService {
   }
 
   // Método para atualizar um chamado existente
-  atualizarChamado(id: string, chamado: Chamado): Observable<any> {
-    return this.http.put(`${this.apiUrl}/chamados/${id}`, chamado);
+  atualizarChamado(id: number, status:string): Observable<any> {
+    return this.http.patch(`${this.apiUrl}/chamados/${id}`,{"status":status});
   }
 
   // Método para excluir um chamado

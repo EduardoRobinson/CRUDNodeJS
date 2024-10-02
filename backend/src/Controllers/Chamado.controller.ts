@@ -1,4 +1,4 @@
-import { Controller, Post, Body, Get } from '@nestjs/common';
+import { Controller, Post, Body, Get, Param, Patch } from '@nestjs/common';
 import { ChamadoService } from 'src/Service/Chamado.service';
 import { Chamado } from 'src/Models/Chamado.model';
 
@@ -16,5 +16,9 @@ export class ChamadoController {
     return this.chamadoService.read();
   }
 
-  // Outros endpoints podem ser adicionados aqui
+  @Patch(':id')
+  update(@Param('id') id: number, @Body('status') status: string){
+    return this.chamadoService.update(id,status);
+  }
+
 }

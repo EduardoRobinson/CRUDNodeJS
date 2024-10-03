@@ -28,7 +28,7 @@ export class ChamadoService {
   }
 
   // Método para excluir um chamado
-  excluirChamado(id: string): Observable<Chamado> {
+  excluirChamado(id: number): Observable<Chamado> {
     return this.http.delete<Chamado>(`${this.apiUrl}/chamados/${id}`);
   }
 }

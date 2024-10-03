@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Deletar Chamado {{chamado.id}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">Fechar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-item>
+    <ion-label>Descrição:</ion-label>
+    <ion-text>{{ chamado.descricao }}</ion-text>
+  </ion-item>
+  <ion-item>
+    <ion-label>Status:</ion-label>
+    <ion-text>{{ chamado.status }}</ion-text>
+  </ion-item>
+
+  <ion-button expand="full" (click)="delete()" color="danger">Deletar</ion-button>
+</ion-content>
+

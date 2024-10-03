@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Chamados Disponíveis</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-grid>
+      <ion-row>
+        <!-- Loop para exibir os chamados em colunas -->
+        <ion-col *ngFor="let chamado of chamados" size="12" size-md="6" size-lg="4">
+          <ion-card>
+            <ion-card-header>
+              <ion-card-title>{{ chamado.id }}</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <p><strong>Descrição:</strong> {{ chamado.descricao }}</p>
+              <p><strong>Categoria:</strong> {{ chamado.categoria }}</p>
+              <p><strong>Status:</strong> {{ chamado.status }}</p>
+              <ion-button style="position: center;" (click)="openModal(chamado)" color="danger">Deletar chamado</ion-button>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+  

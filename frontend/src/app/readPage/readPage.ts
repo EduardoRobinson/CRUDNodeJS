@@ -18,8 +18,7 @@ export class ReadPage implements OnInit{
 
 async get(){
   return this.service.listarChamados().subscribe(async (data: Chamado[]) => {
-    this.chamados = data; 
-    console.log(this.chamados);
+    this.chamados = data;
   });
 }
 

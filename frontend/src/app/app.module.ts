@@ -9,9 +9,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule,HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ModalUpdatePage } from './modalUpdatePage/modalUpdatePage';
+import { ModalDeletePage } from './modalDeletePage/modalDeletePage.component';
 
 @NgModule({
-  declarations: [AppComponent,ModalUpdatePage],
+  declarations: [AppComponent,ModalUpdatePage,ModalDeletePage],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,HttpClientModule,FormsModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],

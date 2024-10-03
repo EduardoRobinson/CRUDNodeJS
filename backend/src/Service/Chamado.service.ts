@@ -23,4 +23,8 @@ export class ChamadoService {
     return this.chamadoRepository.update(id,{status:status});
   }
 
+  async delete(id:number){
+    return this.chamadoRepository.delete({id:id});
+  }
+
 }

@@ -1,4 +1,4 @@
-import { Controller, Post, Body, Get, Param, Patch } from '@nestjs/common';
+import { Controller, Post, Body, Get, Param, Patch, Delete } from '@nestjs/common';
 import { ChamadoService } from 'src/Service/Chamado.service';
 import { Chamado } from 'src/Models/Chamado.model';
 
@@ -19,6 +19,11 @@ export class ChamadoController {
   @Patch(':id')
   update(@Param('id') id: number, @Body('status') status: string){
     return this.chamadoService.update(id,status);
+  }
+
+  @Delete(':id')
+  delete(@Param('id') id: number){
+    return this.chamadoService.delete(id);
   }
 
 }
